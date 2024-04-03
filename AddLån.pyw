@@ -1,7 +1,7 @@
 import mysql.connector 
 
 dbb = mysql.connector.connect(
-    host= "localhost",
+    host= "localho",
     user= "root",
     password = "mysql",
     database = "mydb"
