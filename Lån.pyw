@@ -19,7 +19,7 @@ def addEntry():
 def updateEntry():
     elevID = entry_elev_ID.get()
     bokID = entry_bok_ID.get()
-    mycursor.execute("CALL levertInn(elevID, bokID)")
+    mycursor.execute(f"CALL levertInn({elevID}, {bokID})")
     dbb.commit()
 
 font = ("Comix Sans MS", 12)
