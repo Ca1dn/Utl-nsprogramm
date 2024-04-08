@@ -1,4 +1,5 @@
 import mysql.connector 
+import tkinter as tk
 
 dbb = mysql.connector.connect(
     host= "localhost",
@@ -13,10 +14,19 @@ def addEntry():
     elevID = entry_elev_ID.get()
     bokID = entry_bok_ID.get()
     mycursor.execute("CALL opprettLån(elevID, bokID)")
-    mydeebee.commit()
+    dbb.commit()
 
 def updateEntry():
     elevID = entry_elev_ID.get()
     bokID = entry_bok_ID.get()
     mycursor.execute("CALL levertInn(elevID, bokID)")
-    mydeebee.commit()
+    dbb.commit()
+
+root = tk.Tk()
+entry_elev_ID = tk.Entry(root)
+entry_elev_ID.grid(row = 1, column = 1)
+entry_bok_ID = tk.Entry(root)
+entry_bok_ID.grid(row = 2, column = 1)
+
+tk.Label(root, text = "Legg inn elevens ID").grid(row = 1, column = 0)
+tk.Label(root, text = "Legg inn bokens ID").grid(row = 2, column = 0)
