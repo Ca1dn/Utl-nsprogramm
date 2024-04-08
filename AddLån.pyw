@@ -30,3 +30,8 @@ entry_bok_ID.grid(row = 2, column = 1)
 
 tk.Label(root, text = "Legg inn elevens ID").grid(row = 1, column = 0)
 tk.Label(root, text = "Legg inn bokens ID").grid(row = 2, column = 0)
+
+add_btn = tk.Button(root, text = "Lån bok", command = addEntry)
+add_btn.grid(row = 3, column = 1)
+
+root.mainloop()
