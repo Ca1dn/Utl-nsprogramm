@@ -13,7 +13,7 @@ mycursor = dbb.cursor()
 def addEntry():
     elevID = entry_elev_ID.get()
     bokID = entry_bok_ID.get()
-    mycursor.execute("CALL opprettLån(elevID, bokID)")
+    mycursor.execute(f"CALL opprettLån({elevID}, {bokID})")
     dbb.commit()
 
 def updateEntry():
