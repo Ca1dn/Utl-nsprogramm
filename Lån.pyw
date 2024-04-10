@@ -32,7 +32,7 @@ def lånt_tilbakemelding():
         root.after(3000, lånt_tilbakemelding)
     else:
         har_gitt_tilbakemelding.set(False)
-        tilbakemelding.config(text = "")
+        tilbakemelding.config(text = "", bg='lightgrey')
 
 root = tk.Tk()
 root.geometry("400x150")  
